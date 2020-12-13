@@ -1,0 +1,176 @@
+ @mixin oscillations-button() {
+	// transition: all .2s;
+	border: 0px solid;
+	// border-color: $color__border-button;
+	border-radius: 20px;
+	background: $color__background-button;
+	// color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+		background-color: $color__background-button-hover;
+		color: #fff;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+ }
+  @mixin arrow_link() {
+ 	transition: margin-left .2s;
+	border: none;
+	background: none;
+	padding: 0;
+	border-radius: 0;
+	font-weight: 500;
+	&:before {
+		content: "\e900";
+		margin-right: 1em;
+		font-size: 0.7em;
+		/* use !important to prevent issues with browser extensions that change fonts */
+		font-family: 'icomoon' !important;
+		speak: never;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	&:hover, &:focus {
+		background: none;
+		color: $color__text-main;
+		margin-left: 1em;
+	}
+ }
+
+.arrow_link {
+	@include arrow_link();
+ }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include oscillations-button();
+	&.view, &.view-more {
+		width: 110px;
+	}
+
+}
+body.home, body.post-type-archive-artist, body.post-type-archive-project {
+	.list-view button {
+		@extend .arrow_link;
+		&.view, &.view-more {
+			width: auto;
+		}
+		// @include mq-down(md) {
+			font-size: 0.9em;
+		// }
+	}
+}
+body.home, body.post-type-archive-artist {
+	.list-view button {
+		&:after {
+			content: " profile";
+		}
+		@include mq-down(md) {
+			color: $color__text-sub;
+		}
+	}
+}
+body.post-type-archive-project {
+	.list-view button {
+		&:after {
+			content: " project";
+		}
+	}
+}
+body.post-type-archive-event, body.blog {
+	button {
+		&.view, &.view-more {
+			background: none;
+			border: 2px solid $color__border-button;
+			&:hover {
+				color: #fff;
+				background-color: $color__border-button;
+			}
+		}		
+	}
+	.list-view button {
+		@include mq-up(md) {
+			opacity: 0.5;
+			&:hover {
+				opacity: 1;
+			}			
+		}
+
+	}
+}
+body.post-type-archive-event, body.blog {
+	button {
+		&.view, &.view-more {
+			@include mq-down(md) {
+				width: auto;
+				font-size: 0.8em;
+				@include arrow_link();
+				// padding: 0;
+				// width: auto;
+				margin: 1em 0;
+				font-weight: 500;
+			}
+		}		
+	}
+}
+body.blog {
+	.list-view button {
+		@include mq-down(md) {
+			&:after {
+				content: " media";
+			}
+		}
+
+	}
+}
+.menu-toggle {
+	background: none;
+	border: 2px solid $color__border-button;
+	font-size: 1.2em;
+    border-radius: 24px;
+	&:hover {
+		// color: #fff;
+		// background-color: $color__border-button;
+	}
+	&.close {
+		color: #fff;
+		border-color: #fff;
+		&:hover {
+			color: #fff;
+			// background-color: $color__border-button;
+		}		
+	}
+}
+
+.social-media {
+	a {
+		color: $color__text-main;
+		text-decoration: none;
+	}
+}
+
+.slide-in-box {
+	.close {
+		color: #fff;
+		background-color: #C17D6A;
+		padding: 1em;
+		border-radius: 0;
+		transform: translateY(-100%) rotate(90deg);
+		transform-origin:left bottom 0; 
+	}
+}

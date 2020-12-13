@@ -1,0 +1,39 @@
+header.header {
+	transition: transform .5s ease-out;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	text-align: right;
+	left: 0;
+	top: 0;
+	z-index: 999999;
+	transform: translateX(100%);
+	@include mq-up(md) {
+		width: auto;
+		height: auto;
+		left: auto;
+		right: 0;
+		top: inherit;
+		transform: none;
+	}
+	&.on {
+		transform: translateX(0);
+	}
+	.social-media {
+		display: inline-block;
+		position: absolute;
+		bottom: 0px;
+		right: 10px;
+		font-size: 50px;
+		// margin: 0;
+		// padding: 0;
+		@include mq-up(md) {
+			display: none;
+		}
+		a {
+			color: #fff;
+			// padding: 0;
+		}
+	}
+
+}

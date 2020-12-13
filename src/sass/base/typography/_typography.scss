@@ -1,0 +1,22 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	font-size: 1rem;
+	line-height: $font__line-height-body;
+}
+
+// body.post-type-archive-project,
+// body.post-type-archive-project input,
+// body.post-type-archive-project select,
+// body.post-type-archive-project optgroup,
+// body.post-type-archive-project textarea {
+// 	color: $color__text-main-inversed;
+// }
+
+@import "headings";
+@import "copy";

@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?5c031y');
+  src:  url('../fonts/icomoon.eot?5c031y#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?5c031y') format('truetype'),
+    url('../fonts/icomoon.woff?5c031y') format('woff');
+    // url('../fonts/icomoon.svg?5c031y#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+.icon-instagram-home:before {
+  content: "\e901";
+}
+.icon-facebook:before {
+  content: "\e902";
+}
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-soundcloud .path1:before {
+  content: "\e904";
+  color: rgb(31, 4, 4);
+}
+.icon-soundcloud .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(31, 4, 4);
+}
+.icon-soundcloud .path3:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-soundcloud .path4:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-soundcloud .path5:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-soundcloud .path6:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-soundcloud .path7:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-spotify .path1:before {
+  content: "\e90b";
+  color: rgb(31, 4, 4);
+}
+.icon-spotify .path2:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(31, 4, 4);
+}
+.icon-spotify .path3:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-twitter:before {
+  content: "\e90e";
+}
+.icon-vimeo:before {
+  content: "\e90f";
+}
+.icon-youtube:before {
+  content: "\e910";
+}

@@ -1,0 +1,9 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	// background: url("../assets/Soundwave@2x.png") $color__background-body no-repeat center center fixed; // Fallback for when there is no custom background color defined.
+	background-color: $color__background-body;
+	transition: background-color 1s ease;
+}
