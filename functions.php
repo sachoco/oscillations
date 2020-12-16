@@ -31,7 +31,7 @@ function oscillations_date_format( $post, $format = "std" ) {
 	}
 
 	if($post_type=="event") {
-				 
+
         if(get_field('date_start')){
             if(get_field('date_end')){
                 $date_start_ut = strtotime(get_field('date_start'));
@@ -53,7 +53,7 @@ function oscillations_date_format( $post, $format = "std" ) {
         }
 
 	}else if($post_type=="post"){
-		return get_the_date( "d ".$m_format." Y", $post ); 		
+		return get_the_date( "d ".$m_format." Y", $post );
 	}
 }
 
@@ -73,10 +73,28 @@ function get_plural_name($post_type){
 	        $plural_name = "media";
 	        break;
 	}
-	return $plural_name;		
+	return $plural_name;
 }
 
-
+// add_action( 'mb_relationships_init', function() {
+//     MB_Relationships_API::register( [
+//         'id'         => 'events_to_artists',
+// 				'from'   => [
+// 					'object_type' => 'post',
+// 					'post_type'   => 'event',
+// 					'meta_box'    => [
+// 							'title' => 'Related Artists',
+// 					],
+// 				],
+// 				'to'   => [
+// 					'object_type' => 'post',
+// 					'post_type'   => 'artist',
+// 					'meta_box'    => [
+// 							'title' => 'Related Events',
+// 					],
+// 				]
+//     ] );
+// } );
 // Require the composer autoload for getting conflict-free access to enqueue
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -131,7 +149,7 @@ function add_current_nav_class($classes, $item) {
        if (!empty($menu_slug) && !empty($parent) && strpos($menu_slug,$parent) !== false) {
            $classes[] = 'current-menu-item';
        }
-       
+
        // If the menu item URL contains any of the post type's ancestors
        foreach ( $ancestors as $ancestor ) {
            if (!empty($menu_slug) && !empty($ancestor) && strpos($menu_slug,$ancestor) !== false) {
@@ -158,15 +176,15 @@ function event_post_order( $query ){
        $query->set('order', 'DESC');
         // add the meta query and use the $compare var
         $today = date( 'Ymd' );
-        $meta_query = array( 
+        $meta_query = array(
         	'relation' => 'AND',
-        	array( 
+        	array(
 	            'key' => 'date_start',
 	            'value' => $today,
 	            'compare' => "<",
 	            'type' => 'NUMERIC'
 	        ),
-	        array( 
+	        array(
 	            'key' => 'date_end',
 	            'value' => $today,
 	            'compare' => "<",

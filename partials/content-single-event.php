@@ -9,14 +9,14 @@
 			  <div class="main-slick">
 			    <div>
 			    	<div>
-			    		<div class="thumbnail"><?php the_post_thumbnail("thumbnail-crop"); ?></div>
+			    		<div class="thumbnail"><?php the_post_thumbnail("gallery-crop"); ?></div>
 			    	</div>
 			    </div>
 			  </div>
-		</div>	
+		</div>
 		<div class="flex-wrapper">
 			<div class="primary">
-					
+
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-	  	<?php 
+	  	<?php
 		$images = get_field('gallery');
 		$size = 'gallery-crop '; // (thumbnail, medium, large, full or custom size)
 		// var_dump($images);
@@ -50,7 +50,7 @@
 
 		<div class="flex-wrapper">
 			<div class="primary">
-					
+
 				<h1>About Ejtech</h1>
 				<p>
 Under the label EJTECH, Esteban de la Torre and Judit Eszter Kárpáti combine their know-how. Esteban de la Torre is a media artist, sound artist. Judit Eszter Kárpáti is an interdisciplinary artist, textile artist and material researcher.
