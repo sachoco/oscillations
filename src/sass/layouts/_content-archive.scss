@@ -63,7 +63,7 @@ body.home, body.post-type-archive-artist, body.post-type-archive-project {
 					background: center no-repeat;
 					background-size: cover;
 					width: 100%;
-					min-height: 350px;					
+					min-height: 350px;
 					@include mq-up(md) {
 						position: absolute;
 						height: 100%;
@@ -73,7 +73,7 @@ body.home, body.post-type-archive-artist, body.post-type-archive-project {
 						position: absolute;
 						width: 100%;
 						height: 100%;
-						background-color: rgba(0, 0, 0, 0.2);
+						background-color: rgba(0, 0, 0, 0.3);
 						top: 0;
 						left: 0;
 						display: none;
@@ -92,7 +92,7 @@ body.home, body.post-type-archive-artist, body.post-type-archive-project {
 					}
 					.thumbnail {
 						display: none;
-						
+
 					}
 					.category {
 						text-transform: uppercase;
@@ -124,7 +124,7 @@ body.home, body.post-type-archive-artist, body.post-type-archive-project {
 
 					}
 
-				}				
+				}
 			}
 			&.artist {
 				@include mq-up(md) {
@@ -140,7 +140,7 @@ body.home, body.post-type-archive-artist, body.post-type-archive-project {
 					@include mq-down(md) {
 						height: 330px;
 					}
-					
+
 					clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 92%);
 					.bg {
 						display: none;
@@ -260,7 +260,7 @@ body.home, body.post-type-archive-artist, body.post-type-archive-project {
 							}
 						}
 
-					}				
+					}
 				}
 				&.project {
 					@include mq-down(md) {
@@ -302,7 +302,7 @@ body.home, body.post-type-archive-artist, body.post-type-archive-project {
 		}
 	}
 }
-		
+
 body.post-type-archive-event {
 	section.content {
 		@extend .wrapper;
@@ -319,7 +319,7 @@ body.post-type-archive-event {
 		    	width: 100%;
 		    	background-color: $color__background-body;
 		    	z-index: 5;
-		    }			
+		    }
 		}
 		.section-header {
 			display: none;
@@ -435,7 +435,7 @@ body.post-type-archive-event {
 							}
 						}
 
-						.meta {						
+						.meta {
 							@include mq-down(md) {
 								order: 2;
 								width: 70%;
@@ -447,16 +447,16 @@ body.post-type-archive-event {
 								}
 							}
 						}
-						.more-info {		
+						.more-info {
 							@include mq-down(md) {
 								order: 5;
 							}
 						}
 
-					}				
+					}
 				}
 
-			}	
+			}
 		}
 		&.list-view {
 			@extend .wrapper;
@@ -518,7 +518,7 @@ body.post-type-archive-event {
 						}
 						.info-container {
 							display: flex;
-							
+
 							justify-content: space-between;
 							align-items: center;
 							@include mq-up(md) {
@@ -532,7 +532,7 @@ body.post-type-archive-event {
 									}
 								}
 							}
-							
+
 							.date, .place, .city {
 								border: none;
 								display: block;
@@ -574,12 +574,12 @@ body.post-type-archive-event {
 								@include mq-down(md) {
 									color: $color__text-sub;
 								}
-								
-								
+
+
 								order: 2;
 								// flex-grow: 2;
 								text-overflow: ellipsis;
-								overflow: hidden; 
+								overflow: hidden;
 								white-space: nowrap;
 							}
 							.more-info {
@@ -589,11 +589,11 @@ body.post-type-archive-event {
 								order: 3;
 							}
 
-						}				
+						}
 					}
-				}	
-			}		
-		}		
+				}
+			}
+		}
 	}
 }
 
@@ -613,7 +613,7 @@ body.blog {
 		    // 	width: 100%;
 		    // 	background-color: $color__background-body;
 		    // 	z-index: 5;
-		    // }			
+		    // }
 		}
 		.item {
 			margin-bottom: 5px;
@@ -629,8 +629,8 @@ body.blog {
 					.item-content-wrapper {
 						// transform: translate(-50%, -50%) skew(20deg);
 						clip-path: polygon(12% 15%, 90% 5%, 88% 83%, 9% 92%);
-					}	
-				}				
+					}
+				}
 			}
 
 			.item-inner {
@@ -668,7 +668,7 @@ body.blog {
 					transform: translateY(-50%);
 					// color: white;
 					text-align: center;
-					
+
 					.thumbnail {
 						display: none;
 					}
@@ -718,11 +718,11 @@ body.blog {
 
 					}
 
-				}				
+				}
 			}
 		}
-		
-				
+
+
 		&.list-view {
 			@extend .wrapper;
 			padding-top: 0px;
@@ -740,12 +740,12 @@ body.blog {
 				margin-bottom: 0;
 				margin-right: 0;
 				border-top: 1px solid;
-				width: 100%;	
+				width: 100%;
 				padding: 1em 0;
 				&:hover {
 					.item-content-wrapper {
 						clip-path: none;
-					}				
+					}
 				}
 				.item-inner {
 					position: relative;
@@ -773,8 +773,8 @@ body.blog {
 						.info-container {
 							display: flex;
 							flex-wrap: wrap;
-							
-							
+
+
 							@include mq-up(md) {
 								flex-wrap: nowrap;
 								align-items: center;
@@ -818,7 +818,7 @@ body.blog {
 								width: 100%;
 								order: 2;
 								text-overflow: ellipsis;
-								overflow: hidden; 
+								overflow: hidden;
 								white-space: nowrap;
 								text-align: left;
 								font-size: 1em;
@@ -843,10 +843,10 @@ body.blog {
 							}
 
 						}
-					}				
+					}
 				}
-			}	
-				
-		}	
+			}
+
+		}
 	}
 }

@@ -39,15 +39,15 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
   				$("body").css("background-color", "#FDF4EF");
 	  		}else{
 	  			$(window).scroll();
-	  		} 
-   		} 
+	  		}
+   		}
      	if($("body").hasClass("post-type-archive-project")){
      		if($("section.content").hasClass("list-view")){
   				$("body").removeClass("nav-color-inverse");
   			}else{
 	  			$("body").addClass("nav-color-inverse");
-	  		} 
-     	} 
+	  		}
+     	}
       	if($("body").hasClass("post-type-archive-event")){
      		if($("section.content").hasClass("list-view")){
   				$(".info-container .meta").replaceWith(function() {
@@ -57,10 +57,10 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
 	  			$(".info-container .place").each(function() {
 					$(this).add($(this).next('.meta-item')).wrapAll( "<div class='meta' />");
 				});
-	  		} 
-     	}     	
+	  		}
+     	}
   	});
- 	
+
 
 
   	$("#slide-in-box .close").on("click", function(){
@@ -93,44 +93,50 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
 		arrows: false
 	});
 
+/*
+Vibrant: Picking up a color dynamically from the image
+ */
+
 	$(".item.artist").each(function( index ) {
 		var img = $(this).data("bg");
 		if(img){
 			var vibrant = new Vibrant(img);
 
-			vibrant.getPalette((err, palette) => { 
-				
-				var hex = palette["DarkMuted"].getHex();
-				var rgb = palette["DarkMuted"].getRgb();
+			vibrant.getPalette((err, palette) => {
+
+				// var hex = palette["DarkMuted"].getHex();
+				// var rgb = palette["DarkMuted"].getRgb();
+        var hex = palette["Muted"].getHex();
+				var rgb = palette["Muted"].getRgb();
 				rgb.push(0.7);
 				$(this).attr("data-color",hex);
 				// $(this).css({
-			 //      "background-color": hex,
-			 //    });
-			    $(this).css({
-			      "background-color": "rgba("+rgb.toString()+")",
-			    });
+		    //   "background-color": hex,
+			  // });
+		    $(this).css({
+		      "background-color": "rgba("+rgb.toString()+")",
+		    });
 				$(window).scroll();
-			});  
-		}       
+			});
+		}
 	});
 
 	$(".item.project").each(function( index ) {
 		var img = $(this).data("bg");
 		if(img){
 			var vibrant = new Vibrant(img);
-			vibrant.getPalette((err, palette) => { 
+			vibrant.getPalette((err, palette) => {
 				var hex = palette["Muted"].getHex();
 				$(this).find(".item-content-wrapper").css("background-color",hex);
-			});  
-		}       
+			});
+		}
 	});
 
 	$("article.project").each(function( index ) {
 		var img = $(this).data("bg");
 		if(img){
 			var vibrant = new Vibrant(img);
-			vibrant.getPalette((err, palette) => { 
+			vibrant.getPalette((err, palette) => {
 				var hex = palette["DarkMuted"].getHex();
 				var light_hex = palette["LightVibrant"].getHex();
 				$(this).css({
@@ -142,35 +148,35 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
 			      "color": light_hex
 			    });
 			});
-		}       
+		}
 	});
 
 	$(window).scroll(function() {
-	  
+
 	  if(!$(".content").hasClass("list-view")&&is_desktop_layout ){
 	  // selectors
 	  var $window = $(window),
 	      $body = $('body'),
 	      $section = $('.panel');
-	  
+
 	  // Change 33% earlier than scroll position so colour is there when you arrive.
 	  var scroll = $window.scrollTop() + ($window.height() / 3);
-	 
+
 	  $section.each(function () {
 	    var $this = $(this);
-	    
+
 	    // if position is within range of this panel.
 	    // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
 	    // Remember we set the scroll to 33% earlier in scroll var.
 	    if ($this.offset().top <= scroll && $this.offset().top + $this.height() > scroll) {
-	                 
+
 	      // Add class of currently active div
 	      $body.css('background-color', $(this).data('color'));
 
 	    }
 
-	  });    
-	  
+	  });
+
 	  }
 
 	}).scroll();
