@@ -48,14 +48,14 @@
 			      </g>
 				</g>
 			    </g>
-			  </g>				
+			  </g>
 			</svg>
 		</div>
 	</div>
 	<div class="partner-info">
 		<div class="wrapper">
 			<div class="partners-content">
-				
+
 				<div>
 					<div class="logo">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/iii-logo@2x.png" alt="">
@@ -114,9 +114,13 @@
 
 	</div>
 	<div class="footer">
-		Oscillations &copy; 2020
-		Development: Satoshi Shiraishi
-		Design by: studio Another Day
+		<span class="copyright">
+			Oscillations &copy; 2020
+		</span>
+		<ul class="credit">
+			<li>Development: sachoco</li>
+			<li>Design by: studio Another Day</li>
+		</ul>
 	</div>
 </section>
 <div id="slide-in-box" class="slide-in-box">
@@ -125,7 +129,7 @@
 		<h2>Lydgalleriet</h2>
 		<div>Strandgaten 195, 5004 Bergen.</div>
 		<p>
-			Lydgalleriet is an exhibition platform for sound art and sound related art practices, situated in Bergen, Norway. We explore today’s plethora of experimental sound-based art practices and auditive cultures through gallery shows, multichannel concerts, discursive work and performativity.  
+			Lydgalleriet is an exhibition platform for sound art and sound related art practices, situated in Bergen, Norway. We explore today’s plethora of experimental sound-based art practices and auditive cultures through gallery shows, multichannel concerts, discursive work and performativity.
 		</p>
 		<button class="arrow_link">Visit website</button>
 	</div>

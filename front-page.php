@@ -12,9 +12,9 @@
 	<section class="intro panel" data-color="#FDF4EF">
 		<div class="intro-item " >
 			<div class="item-content">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-text.svg">				
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-text.svg">
 			</div>
-		</div>	
+		</div>
 		<div class="social-media">
 			<a href="#link-to-instagram"><span class="icon-instagram-home"></span></a>
 		</div>
@@ -27,7 +27,7 @@
 			</div>
 		@else
 
-		  	@section('before_content')
+		  @section('before_content')
 			<div class="view-switcher">
 				<button class="listview-toggle" >View as list</button>
 				<button class="close" ><span class="cross-icon"></span>Close list</button>
@@ -35,11 +35,10 @@
 			@endsection
 
 
-			@while ($the_query->have_posts()) 
+			@while ($the_query->have_posts())
 			<?php $the_query->the_post(); ?>
 				@include('partials.content-'.get_post_type())
 			@endwhile
 
 		@endif
 	@endsection
-

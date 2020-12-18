@@ -54,6 +54,23 @@ function get_plural_name($post_type){
 	return $plural_name;
 }
 
+function random_clip_path($post_type = 'artist'){
+	if($post_type=='event'){
+		$choices = array(
+			'8% 0, 100% 0%, 92% 100%, 0 100%',
+			'0 0%, 92% 0%, 100% 100%, 8% 100%',
+		);
+	}else{
+		$choices = array(
+			'0 0, 100% 8%, 100% 100%, 0 92%',
+			'0 8%, 100% 0%, 100% 92%, 0 100%',
+		);
+	}
+
+	$choice = array_rand($choices,1);
+	$output = 'polygon('.$choices[$choice].')';
+	return $output;
+}
 
 function add_current_nav_class($classes, $item) {
 

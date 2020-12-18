@@ -9,6 +9,13 @@ body.single {
 			background-color: #FFE3CC;
 			color: #BA7D4C;
 		}
+		@include mq-up(md) {
+			.related-items {
+				.back-navigation {
+					display: none;
+				}
+			}
+		}
 	}
 	&.single-event, &.single-post {
 		// background-color: $color__background-body;
@@ -25,7 +32,7 @@ body.single {
 		overflow: hidden;
 		@include mq-down(md) {
 			// @include wrapper();
-			
+
 		}
 
 		&.artist {
@@ -44,7 +51,7 @@ body.single {
 					height: 120px;
 					color: #FFE3CC;
 					transform: rotate(-90deg);
-					transform-origin:left top 0; 
+					transform-origin:left top 0;
 					text-align: center;
 					position: absolute;
 					bottom: -120px;
@@ -70,7 +77,7 @@ body.single {
 						p {
 							margin: 0 0 1em;
 						}
-			
+
 					}
 					.secondary {
 						width: 19%;
@@ -79,7 +86,7 @@ body.single {
 				>div {
 					border-top: 2px solid;
 				}
-			}			
+			}
 		}
 		&.project {
 			padding-top: 30px;
@@ -102,7 +109,7 @@ body.single {
 			}
 		}
 		&.event, &.media {
-			
+
 			// .header {
 			// 	background: no-repeat;
 			// 	background-size: cover;
@@ -172,13 +179,13 @@ body.single {
 					}
 					order:1;
 					.secondary-inner {
-						
+
 						margin: auto;
 						@include mq-up(md) {
 							width: 175px;
 							padding-top: 3em;
 						}
-						
+
 						>div {
 							border-bottom: 1px solid;
 							padding: 1em 0;
@@ -192,7 +199,7 @@ body.single {
 						}
 					}
 				}
-			}		
+			}
 		}
 		@include mq-up(md) {
 			&.media {
@@ -210,7 +217,7 @@ body.single {
 						margin: 1em 0 0;
 					}
 				}
-		
+
 			}
 		}
 		.article-header {
@@ -235,7 +242,7 @@ body.single {
 	}
 	.section-title {
 		@extend h1;
-		
+
 		text-transform: capitalize;
 		@include mq-up(md) {
 			font-size: 1.5em;
@@ -248,14 +255,14 @@ body.single {
 			border-top: 2px solid;
 			margin-top: 5em;
 		}
-		
+
 	}
 }
 .footerspacer {
     width: 100%;
     pointer-events: none;
     height: 69vh;
-}	
+}
 .slick {
 	margin: 1em 0;
 	@include mq-up(md) {
@@ -269,12 +276,12 @@ body.single {
 			&:hover {
 				img {
 					opacity: 1;
-					filter: brightness(100%);				
+					filter: brightness(100%);
 				}
 
 			}
-		}		
-	}	
+		}
+	}
 
 }
 .slick-slider .slick-track, .slick-slider .slick-list {
@@ -307,6 +314,6 @@ body.single {
 
 
 
-.left-align-slick > .slick-list > .slick-track {    
+.left-align-slick > .slick-list > .slick-track {
     margin-left:0;
 }

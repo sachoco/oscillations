@@ -4,7 +4,7 @@ body.page {
 			padding-top: 140px;
 		}
 		h1 {
-			
+
 			@include mq-down(md) {
 				font-size: 43px;
 				text-align: center;
@@ -81,7 +81,7 @@ section.partners {
 							cy: 0;
 							r: 50;
 						}
-						
+
 					}
 				}
 			}
@@ -122,11 +122,31 @@ section.partners {
 					}
 
 				}
+				.info {
+					margin-top: .5em;
+				}
 			}
 			.below-partners {
 				padding-top: 1em;
+				img {
+					margin-top: 1em;
+				}
 			}
 
+		}
+	}
+	.footer {
+		font-size: 0.8em;
+		color: #757695;
+		background-color: #383849;
+		padding: 20px 35px;
+		ul {
+			float: right;
+			list-style: none;
+			li {
+				display: inline-block;
+				margin-left: 35px;
+			}
 		}
 	}
 }
@@ -164,11 +184,12 @@ section.partners {
 		transform: translateY(0%);
 		@include mq-up(md) {
 			margin-left: 0;
-		}	
+		}
 	}
 	.close {
 		position: absolute;
 	    top: 0;
 	    left: 0;
 	}
+
 }

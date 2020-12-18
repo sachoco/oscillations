@@ -17,7 +17,7 @@ section.intro {
 	position: relative;
 	height: 100vh;
 	.intro-item {
-		width: 90%;
+		width: 80%;
 		max-width: 580px;
 		margin: auto;
 		text-align: center;
@@ -46,14 +46,16 @@ section.intro {
 		background-size: contain;
 		// max-width: 780px;
 		max-width: 580px;
+		z-index: 999999;
+		pointer-events: none;
 		@include mq-up(md) {
 			width: 80%;
 			height: 90%;
 		}
-	}		
+	}
 	.social-media {
 		display: none;
-		position: absolute;
+		position: fixed;
 		bottom: 50px;
 		left: 50px;
 		font-size: 50px;
@@ -68,5 +70,3 @@ body.home {
 		padding-top: 70px !important;
 	}
 }
-
-

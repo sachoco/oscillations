@@ -15,7 +15,7 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
         if (windowsize > 768) {
             is_desktop_layout = true;
         }else{
-			is_desktop_layout = false;
+		        is_desktop_layout = true;
         }
     }
     // Execute on load
@@ -110,12 +110,9 @@ Vibrant: Picking up a color dynamically from the image
 				var rgb = palette["Muted"].getRgb();
 				rgb.push(0.7);
 				$(this).attr("data-color",hex);
-				// $(this).css({
-		    //   "background-color": hex,
-			  // });
-		    $(this).css({
-		      "background-color": "rgba("+rgb.toString()+")",
-		    });
+		    // $(this).css({
+		    //   "background-color": "rgba("+rgb.toString()+")",
+		    // });
 				$(window).scroll();
 			});
 		}
@@ -132,6 +129,26 @@ Vibrant: Picking up a color dynamically from the image
 		}
 	});
 
+  $("article.artist").each(function( index ) {
+		var img = $(this).data("bg");
+		if(img){
+			var vibrant = new Vibrant(img);
+			vibrant.getPalette((err, palette) => {
+				var hex = palette["Muted"].getHex();
+				var light_hex = palette["LightVibrant"].getHex();
+        var $article_header_inner = $(this).find(".article-header-inner");
+				$article_header_inner.css({
+			      "background-color": hex,
+			      "color": light_hex
+			    });
+			    // $(".related-items").css({
+			    //   "background-color": hex,
+			    //   "color": light_hex
+			    // });
+			});
+		}
+	});
+
 	$("article.project").each(function( index ) {
 		var img = $(this).data("bg");
 		if(img){
@@ -143,10 +160,16 @@ Vibrant: Picking up a color dynamically from the image
 			      "background-color": hex,
 			      "color": light_hex
 			    });
-			    $(".related-items").css({
-			      "background-color": hex,
-			      "color": light_hex
-			    });
+		    $(".related-items").css({
+		      "background-color": hex,
+		      "color": light_hex
+		    });
+        $(".related-items .back").css({
+		      "color": light_hex
+		    });
+        $(".related-items .back-navigation").css({
+		      "border-color": light_hex
+		    });
 			});
 		}
 	});

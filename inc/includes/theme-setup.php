@@ -9,7 +9,7 @@ add_action( 'init', 'register_my_menu' );
 add_theme_support( 'post-thumbnails' );
 
 if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'thumbnail-crop', 280, 160, true );
+	add_image_size( 'thumbnail-crop', 560, 320, true );
 	add_image_size( 'gallery-crop', 1300, 700, true );
 	add_image_size( 'medium-crop', 600, 350, true );
 }
