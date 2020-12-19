@@ -48,21 +48,13 @@
 		</div>
 		<?php endif; ?>
 
-		<div class="flex-wrapper">
+		<!-- <div class="flex-wrapper">
 			<div class="primary">
-
-				<h1>About Ejtech</h1>
-				<p>
-Under the label EJTECH, Esteban de la Torre and Judit Eszter Kárpáti combine their know-how. Esteban de la Torre is a media artist, sound artist. Judit Eszter Kárpáti is an interdisciplinary artist, textile artist and material researcher.
-</p><p>
-EJTECH /’eitech’/ is a polydisciplinary studio working with unstable media, experimental interfaces, electronic textile and augmented materials. Textile, sound, light, and space are paramount elements in their practice. EJTECH works as a tool to investigate liminal states, notions of time, and the state of presence, using technological methods as active, participatory installations or multi-sensorial performances within their self proclaimed technospiritual tradition.
-				</p>
-
 			</div>
 			<div class="secondary">
 				<div class="secondary-inner">
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </article>

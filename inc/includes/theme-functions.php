@@ -1,7 +1,7 @@
 <?php
 function oscillations_date_format( $post, $format = "std" ) {
 	$post_type = $post->post_type;
-
+	$post_id = $post->ID;
 	if($format=="std"){
 		$m_format = "F";
 	}else{
@@ -10,10 +10,10 @@ function oscillations_date_format( $post, $format = "std" ) {
 
 	if($post_type=="event") {
 
-        if(get_field('date_start')){
-            if(get_field('date_end')){
-                $date_start_ut = strtotime(get_field('date_start'));
-                $date_end_ut = strtotime(get_field('date_end'));
+        if(get_field('date_start', $post_id)){
+            if(get_field('date_end', $post_id)){
+                $date_start_ut = strtotime(get_field('date_start', $post_id));
+                $date_end_ut = strtotime(get_field('date_end', $post_id));
                 if(date_i18n("MY", $date_start_ut)==date_i18n("MY", $date_end_ut)){
                 	$date_start = date_i18n("d", $date_start_ut);
                 }else if(date_i18n("Y", $date_start_ut)==date_i18n("Y", $date_end_ut)){
@@ -24,7 +24,7 @@ function oscillations_date_format( $post, $format = "std" ) {
                 $date_end = date_i18n("d ".$m_format." Y", $date_end_ut);
                 return $date_start." - ". $date_end;
             }else{
-            	$unixtimestamp = strtotime(get_field('date_start'));
+            	$unixtimestamp = strtotime(get_field('date_start', $post_id));
                 $date_start = date_i18n("d ".$m_format." Y", $unixtimestamp);
                 return $date_start;
             }
@@ -70,6 +70,24 @@ function random_clip_path($post_type = 'artist'){
 	$choice = array_rand($choices,1);
 	$output = 'polygon('.$choices[$choice].')';
 	return $output;
+}
+
+function format_related_item($post=null){
+	if($post):
+		$permalink = get_permalink( $post->ID );
+		$title = get_the_title( $post->ID );
+		$thumbnail = get_the_post_thumbnail_url($post->ID,'thumbnail-crop');
+
+		$output = "<div>";
+		$output .= "<div class='related-thumbnail'><img src='".esc_url($thumbnail)."' alt='".$title."'></div>";
+		$output .= "<div class='related-meta'>";
+		$output .= "<a href='".esc_url( $permalink )."'><button class='view-more'>More info</button></a>";
+		$output .= "<span class='title'>".$title."</span>";
+		$output .= "</div>";
+		$output .= "</div>";
+		return $output;
+	endif;
+
 }
 
 function add_current_nav_class($classes, $item) {

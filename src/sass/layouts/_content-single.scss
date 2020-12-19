@@ -63,13 +63,15 @@ body.single {
 				}
 			}
 			.flex-wrapper {
-				justify-content: space-between;
-				flex-wrap: wrap;
+
 				@include mq-up(md) {
 					display: flex;
+					justify-content: space-between;
+					flex-wrap: nowrap;
 					.primary {
 						width: 79%;
 						font-size: 1.5em;
+						margin-right: 2%;
 						h1 {
 							font-size: 1em;
 							margin: 1em 0 0;
@@ -80,7 +82,18 @@ body.single {
 
 					}
 					.secondary {
-						width: 19%;
+						width: 270px;//19%;
+						padding: 1em 0;
+						ul {
+							list-style: none;
+							margin: 1em 0;
+							padding: 0;
+							a {
+								color: #BA7D4C;
+								font-weight: 600;
+								text-decoration: none;
+							}
+						}
 					}
 				}
 				>div {

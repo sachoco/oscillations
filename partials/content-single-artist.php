@@ -10,12 +10,48 @@
 					<?php the_content(); ?>
 				</div>
 				<div class="secondary">
-					<div>
-						Events
-					</div>
-					<div>
+				<?php
+					$events = get_posts(array(
+						'post_type' => 'event',
+						'meta_query' => array(
+							array(
+								'key' => 'artists', // name of custom field
+								'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+								'compare' => 'LIKE'
+							)
+						)
+					));
+					?>
+					<?php if( $events ): ?>
+						<div class="title">
+							Events
+						</div>
+						<ul class="events">
+						<?php foreach( $events as $event ): ?>
+							<li>
+								<a href="<?php echo get_permalink( $event->ID ); ?>">
+									<?php echo get_the_title( $event->ID ); ?>
+								</a>
+								<div class="date">
+									<?php echo oscillations_date_format($event); ?>
+								</div>
+								<div class="meta">
+									<?php
+										$meta = array();
+										if(get_field("venue",$event->ID)) array_push($meta, get_field("venue",$event->ID));
+										if(get_field("city",$event->ID)) array_push($meta, get_field("city",$event->ID));
+										echo implode(', ', $meta);
+									?>
+								</div>
+							</li>
+						<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
+
+
+					<!-- <div class="section-title">
 						Media
-					</div>
+					</div> -->
 
 				</div>
 			</div>

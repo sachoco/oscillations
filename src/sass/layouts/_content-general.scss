@@ -70,3 +70,16 @@ body.home {
 		padding-top: 70px !important;
 	}
 }
+
+.related-items {
+	.related-meta {
+		display: flex;
+		>a {
+			display: inline-block;
+			margin: 1em 2em 1em 0;
+		}
+		.title {
+			margin: 0.5em;
+		}
+	}
+}
