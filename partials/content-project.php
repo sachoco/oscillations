@@ -5,7 +5,7 @@
 			<div class="item-content">
 				<div class="thumbnail"><?php the_post_thumbnail("thumbnail-crop"); ?></div>
 					<div class="title"><?php the_title( ); ?></div>
-					<div class="description">Jonathan Reus 2009</div>
+					<div class="description"><?php the_field("artist"); ?> <?php the_field("year"); ?></div>
 				<a href="<?php the_permalink(); ?>"><button class="view">view</button></a>
 			</div>
 		</div>

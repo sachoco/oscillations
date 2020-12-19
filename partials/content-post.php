@@ -8,14 +8,18 @@
 					<div class="title">
 						<?php the_title(); ?>
 					</div>
-					<div class="media-type">Media type</div>
+					<div class="media-type">
+						<?php
+						  // to display categories without a link
+						  foreach ( ( get_the_category() ) as $category ) {
+						    echo $category->cat_name . ' ';
+						  }
+						?>					</div>
 					<div class="more-info">
 						<a href="<?php the_permalink(); ?>"><button class="view">view</button></a>
-					</div>	
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-
