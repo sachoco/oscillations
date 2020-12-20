@@ -1,6 +1,14 @@
+const {
+	getFileLoaderOptions,
+	issuerForNonStyleFiles,
+	issuerForStyleFiles,
+	babelLoader,
+	fileLoader,
+} = require('@wpackio/scripts');
+
 const pkg = require('./package.json');
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
@@ -40,8 +48,62 @@ module.exports = {
 				main: ['./src/js/main.js', './src/sass/style.scss'], // Or an array of string (string[])
 			},
 			// Extra webpack config to be dynamically created
-			webpackConfig: undefined,
-			// webpackConfig: {
+			// webpackConfig: undefined,
+			webpackConfig: (config, merge, appDir, isDev) => {
+				const svgoLoader = {
+					loader: 'svgo-loader',
+					options: {
+						plugins: [
+							{ removeTitle: true },
+							{ convertColors: { shorthex: false } },
+							{ convertPathData: false },
+						],
+					},
+				};
+				// create module rules
+				const configWithSvg = {
+					module: {
+						rules: [
+							// SVGO Loader
+							// https://github.com/rpominov/svgo-loader
+							// This rule handles SVG for javascript files
+							{
+								test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+								use: [
+									{
+										loader: fileLoader,
+										options: getFileLoaderOptions(
+											appDir,
+											isDev,
+											false
+										),
+									},
+									svgoLoader,
+								],
+								issuer: issuerForNonStyleFiles,
+							},
+							// This rule handles SVG for style files
+							{
+								test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+								use: [
+									{
+										loader: fileLoader,
+										options: getFileLoaderOptions(
+											appDir,
+											isDev,
+											true
+										),
+									},
+									svgoLoader,
+								],
+								issuer: issuerForStyleFiles,
+							},
+						],
+					},
+				};
+				// merge the new module.rules with webpack-merge api
+				return merge(config, configWithSvg);
+			},			// webpackConfig: {
 			// 	module: {
 			// 		rules: [
 			// 			{

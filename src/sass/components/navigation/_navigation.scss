@@ -46,14 +46,31 @@
 		&:hover > a,
 		&.focus > a {
 		}
+		&.menu-item-home {
+			svg {
+				display: none;
+			}
+		}
 		@include mq-up(md) {
 			// text-align: left;
 			margin-right: 1.8em;
 			&.menu-item-home {
-				display: none;
+				// display: none;
+
+				a {
+					visibility: hidden;
+					font-size: 0;
+					border: none !important;
+					svg {
+						display: inline-block;
+						visibility: visible;
+						path {
+							fill: var(--nav-text-color);
+						}
+					}
+				}
 			}
 		}
-
 		&.menu-aboutus a {
 			@include mq-up(md) {
 				// @include oscillations-button();
