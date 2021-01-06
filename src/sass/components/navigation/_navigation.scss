@@ -55,20 +55,20 @@
 			// text-align: left;
 			margin-right: 1.8em;
 			&.menu-item-home {
-				// display: none;
+				display: none;
 
-				a {
-					visibility: hidden;
-					font-size: 0;
-					border: none !important;
-					svg {
-						display: inline-block;
-						visibility: visible;
-						path {
-							fill: var(--nav-text-color);
-						}
-					}
-				}
+				// a {
+				// 	visibility: hidden;
+				// 	font-size: 0;
+				// 	border: none !important;
+				// 	svg {
+				// 		display: inline-block;
+				// 		visibility: visible;
+				// 		path {
+				// 			fill: var(--nav-text-color);
+				// 		}
+				// 	}
+				// }
 			}
 		}
 		&.menu-aboutus a {

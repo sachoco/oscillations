@@ -36,7 +36,9 @@ section.intro {
 	}
 	&:before {
 		content: "";
-		background: url("../assets/Soundwave@2x.png") no-repeat center center; // Fallback for when there is no custom background color defined.
+		// background: url("../assets/Soundwave@2x.png") no-repeat center center; // Fallback for when there is no custom background color defined.
+		background: url("../assets/Soundwave-new@2x.png") no-repeat center center; // Fallback for when there is no custom background color defined.
+		mix-blend-mode: overlay;
 		position: fixed;
 		width: 90%;
 		height: 90%;
@@ -46,6 +48,7 @@ section.intro {
 		background-size: contain;
 		// max-width: 780px;
 		max-width: 580px;
+		// max-width: 650px;
 		z-index: 999999;
 		pointer-events: none;
 		@include mq-up(md) {

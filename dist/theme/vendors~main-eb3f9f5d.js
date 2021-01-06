@@ -7,7 +7,7 @@
  * @link UNLICENSED
  * @license UNLICENSED
  * 
- * Copyright (c) 2020 Satoshi Shiraishi
+ * Copyright (c) 2021 Satoshi Shiraishi
  * 
  * This software is released under the UNLICENSED License
  * https://opensource.org/licenses/UNLICENSED
