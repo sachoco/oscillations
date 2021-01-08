@@ -5,7 +5,7 @@
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="795" viewBox="0 0 1440 795">
 			  <g id="Group_288" data-name="Group 288" >
 			    <g transform="translate(579 0)">
-			     <g class="poi">
+			     <g class="poi" data-id="241">
 				    <g class="ring" fill="none" stroke="#000" stroke-width="2">
 				      <circle cx="9" cy="17" r="0" fill="none"	/>
 				    </g>
@@ -16,7 +16,7 @@
 				</g>
 			    </g>
 			    <g transform="translate(550 490)">
-			    <g class="poi">
+			    <g class="poi" data-id="235">
 				    <g class="ring" fill="none" stroke="#000" stroke-width="2">
 				      <circle cx="9" cy="17" r="0" fill="none"	/>
 				    </g>
@@ -27,7 +27,7 @@
 				</g>
 			    </g>
 			    <g transform="translate(548 551)">
-			     <g class="poi">
+			     <g class="poi" data-id="237">
 				    <g class="ring" fill="none" stroke="#000" stroke-width="2">
 				      <circle cx="9" cy="17" r="0" fill="none"	/>
 				    </g>
@@ -38,7 +38,7 @@
 				</g>
 			    </g>
 			    <g transform="translate(860 667)">
-			     <g class="poi">
+			     <g class="poi" data-id="239">
 				    <g class="ring" fill="none" stroke="#000" stroke-width="2">
 				      <circle cx="9" cy="17" r="0" fill="none"	/>
 				    </g>
@@ -126,11 +126,14 @@
 <div id="slide-in-box" class="slide-in-box">
 	<div class="content">
 		<button class="close">Close</button>
-		<h2>Lydgalleriet</h2>
-		<div>Strandgaten 195, 5004 Bergen.</div>
-		<p>
-			Lydgalleriet is an exhibition platform for sound art and sound related art practices, situated in Bergen, Norway. We explore today’s plethora of experimental sound-based art practices and auditive cultures through gallery shows, multichannel concerts, discursive work and performativity.
-		</p>
+		<h2 class="title"></h2>
+		<div class="body"></div>
+		<a class="website" href="" target="_blank">
 		<button class="arrow_link">Visit website</button>
+		</a>
+		<div class="social_link">
+			<a class="facebook" href="" target="_blank"><span class="icon-facebook"></span></a>
+			<a class="instagram" href="" target="_blank"><span class="icon-instagram"></span></a>
+		</div>
 	</div>
 </div>

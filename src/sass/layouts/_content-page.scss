@@ -179,6 +179,18 @@ section.partners {
 			margin: 0 0 0 auto;
 			padding: 80px 80px 0 180px;
 		}
+		.social_link {
+			font-size: 2em;
+	    margin-top: 1em;
+			a {
+				cursor: pointer;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+
+		}
 	}
 	&.active {
 		transform: translateY(0%);

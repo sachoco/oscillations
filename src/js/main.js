@@ -69,7 +69,28 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
   	});
 
   	$("#partners-map .poi").on("click", function(){
-  		$("#slide-in-box").addClass("active");
+      var id = $(this).data("id");
+      $.ajax({
+          type: 'POST',
+          url: ajaxurl,
+          data: {
+              'action' : 'get_partner',
+              'id' : id,
+          },
+          dataType:'json',
+          success: function( response ){
+            var obj = response;
+            var $container = $("#slide-in-box .content");
+            $container.find(".title").text(obj.title);
+            $container.find(".body").html(obj.content);
+            $container.find(".website").attr("href", obj.website);
+            $container.find(".facebook").attr("href", obj.facebook);
+            $container.find(".instagram").attr("href", obj.instagram);
+
+            $("#slide-in-box").addClass("active");
+          }
+      });
+      return false;
   	});
 
   	$(".slick").slick({
@@ -208,6 +229,7 @@ Vibrant: Picking up a color dynamically from the image
 	  }
 
 	}).scroll();
+
 
 
 

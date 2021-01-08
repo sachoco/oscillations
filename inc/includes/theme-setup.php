@@ -14,6 +14,29 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'medium-crop', 600, 350, true );
 }
 
+function add_my_ajaxurl() {
+?>
+    <script>
+        var ajaxurl = '<?php echo admin_url( 'admin-ajax.php'); ?>';
+    </script>
+<?php
+}
+add_action( 'wp_head', 'add_my_ajaxurl', 1 );
+
+function get_partner(){
+
+    $id = $_POST['id'];
+    $post = get_post( $id );
+		$website = get_field("website", $id);
+		$facebook = get_field("facebook", $id);
+		$instagram = get_field("instagram", $id);
+		$return_obj = array("title"=>$post->post_title,"content"=>apply_filters('the_content',$post->post_content), "website"=>$website, "facebook"=>$facebook, "instagram"=>$instagram);
+    echo json_encode( $return_obj );
+
+    die();
+}
+add_action( 'wp_ajax_get_partner', 'get_partner' );
+add_action( 'wp_ajax_nopriv_get_partner', 'get_partner' );
 
 // add_action( 'mb_relationships_init', function() {
 //     MB_Relationships_API::register( [
