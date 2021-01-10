@@ -18,6 +18,8 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
 		        is_desktop_layout = true;
         }
     }
+    if($("body").hasClass('single-event')||$("body").hasClass('single-post')) $("body").addClass('mix-blend-menu nav-color-inverse');
+
     // Execute on load
     checkWidth();
     // Bind event listener

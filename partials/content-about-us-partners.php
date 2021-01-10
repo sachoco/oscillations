@@ -58,50 +58,50 @@
 
 				<div>
 					<div class="logo">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/iii-logo@2x.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/iii-logo.svg" alt="">
 					</div>
 					<div class="info">
 						iii<br>
 						The Hague<br>
 						The Netherlands<br>
 						E-mail<br>
-						website<br>
+						<a href="https://instrumentinventors.org/" target="_blank">website</a><br>
 					</div>
 				</div>
 				<div>
 					<div class="logo">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/overtoon-logo@2x.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/overtoon-logo.svg" alt="">
 					</div>
 					<div class="info">
 						Overtoon<br>
 						Brussel<br>
 						Belgium<br>
 						E-mail<br>
-						website<br>
+						<a href="https://www.overtoon.org/" target="_blank">website</a><br>
 					</div>
 				</div>
 				<div>
 					<div class="logo">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bb15-logo@2x.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bb15-logo.png" alt="">
 					</div>
 					<div class="info">
 						bb15<br>
 						Linz<br>
 						Austria<br>
 						E-mail<br>
-						website<br>
+						<a href="http://bb15.at/" target="_blank">website</a><br>
 					</div>
 				</div>
 				<div>
 					<div class="logo">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lydgalleriet-logo@2x.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lydgalleriet-logo.png" alt="">
 					</div>
 					<div class="info">
 						Lydgalleriet<br>
 						Bergen<br>
 						Norway<br>
 						E-mail<br>
-						website<br>
+						<a href="https://www.lydgalleriet.no/" target="_blank">website</a><br>
 					</div>
 				</div>
 			</div>
@@ -115,7 +115,7 @@
 	</div>
 	<div class="footer">
 		<span class="copyright">
-			Oscillations &copy; 2020
+			Oscillations &copy; <?php echo date('Y'); ?>
 		</span>
 		<ul class="credit">
 			<li>Development: sachoco</li>

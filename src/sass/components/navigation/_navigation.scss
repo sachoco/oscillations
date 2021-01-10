@@ -1,3 +1,4 @@
+
 .main-navigation {
 	width: 100%;
 	height: 100%;
@@ -13,7 +14,7 @@
 		font-family: $font__main;
 		text-transform: none;
 		width: fit-content;
-	    float: right;
+	  float: right;
 	}
 	ul {
 		// display: none;
@@ -103,6 +104,7 @@
 		outline: none;
 		@include mq-up(md) {
 			color: $color__text-main;
+			// color: $color__text-main-inversed;
 			padding: 0.4em 1em;
 		}
 		&:hover {
@@ -515,5 +517,10 @@ body.nav-color-inverse {
 		.current-menu-ancestor > a {
 			border-color: var(--nav-text-color);
 		}
+	}
+}
+body.mix-blend-menu {
+	header, .back-navigation {
+		mix-blend-mode: difference;
 	}
 }
