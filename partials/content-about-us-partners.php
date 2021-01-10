@@ -124,6 +124,9 @@
 	</div>
 </section>
 <div id="slide-in-box" class="slide-in-box">
+	<div class="image">
+		<img src="" alt="">
+	</div>
 	<div class="content">
 		<button class="close">Close</button>
 		<h2 class="title"></h2>

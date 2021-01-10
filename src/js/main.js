@@ -88,6 +88,12 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
             $container.find(".website").attr("href", obj.website);
             $container.find(".facebook").attr("href", obj.facebook);
             $container.find(".instagram").attr("href", obj.instagram);
+            if(obj.image){
+              $("#slide-in-box .image img").attr("src", obj.image);
+            }else{
+              $("#slide-in-box .image img").attr("src", "");
+            }
+
 
             $("#slide-in-box").addClass("active");
           }

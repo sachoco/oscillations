@@ -27,10 +27,11 @@ function get_partner(){
 
     $id = $_POST['id'];
     $post = get_post( $id );
+		$thumbnail = get_the_post_thumbnail_url($id, "medium");
 		$website = get_field("website", $id);
 		$facebook = get_field("facebook", $id);
 		$instagram = get_field("instagram", $id);
-		$return_obj = array("title"=>$post->post_title,"content"=>apply_filters('the_content',$post->post_content), "website"=>$website, "facebook"=>$facebook, "instagram"=>$instagram);
+		$return_obj = array("title"=>$post->post_title,"image"=>$thumbnail,"content"=>apply_filters('the_content',$post->post_content), "website"=>$website, "facebook"=>$facebook, "instagram"=>$instagram);
     echo json_encode( $return_obj );
 
     die();
