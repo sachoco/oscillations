@@ -64,7 +64,7 @@
 						iii<br>
 						The Hague<br>
 						The Netherlands<br>
-						E-mail<br>
+						<a href="mailto:info@instrumentinventors.org?subject=Oscillations" target="_blank">E-mail</a><br>
 						<a href="https://instrumentinventors.org/" target="_blank">website</a><br>
 					</div>
 				</div>
@@ -76,7 +76,7 @@
 						Overtoon<br>
 						Brussel<br>
 						Belgium<br>
-						E-mail<br>
+						<a href="mailto:office@overtoon.org?subject=Oscillations" target="_blank">E-mail</a><br>
 						<a href="https://www.overtoon.org/" target="_blank">website</a><br>
 					</div>
 				</div>
@@ -88,7 +88,7 @@
 						bb15<br>
 						Linz<br>
 						Austria<br>
-						E-mail<br>
+						<a href="mailto:office@bb15.at?subject=Oscillations" target="_blank">E-mail</a><br>
 						<a href="http://bb15.at/" target="_blank">website</a><br>
 					</div>
 				</div>
@@ -100,7 +100,7 @@
 						Lydgalleriet<br>
 						Bergen<br>
 						Norway<br>
-						E-mail<br>
+						<a href="mailto:post@lydgalleriet.no?subject=Oscillations" target="_blank">E-mail</a><br>
 						<a href="https://www.lydgalleriet.no/" target="_blank">website</a><br>
 					</div>
 				</div>

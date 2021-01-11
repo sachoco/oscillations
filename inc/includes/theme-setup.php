@@ -96,3 +96,17 @@ function event_post_order( $query ){
     }
 }
 add_action( 'pre_get_posts', 'event_post_order' );
+
+
+function my_loginlogo() {
+	echo '<style type="text/css">
+		h1 a {
+			background-image: url(' . get_template_directory_uri() . '/images/logo@2x.png) !important;
+			-webkit-background-size: 240px !important;
+		background-size: 240px !important;
+		width: 100% !important;
+		height: 230px !important;
+		}
+	</style>';
+}
+add_action('login_head', 'my_loginlogo');
