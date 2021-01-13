@@ -58,7 +58,7 @@ body.home, body.post-type-archive-artist, body.post-type-archive-project {
 				// left: 50%;
 				// transform: translate(-50%,-50%);
 
-				pointer-events: none;
+				// pointer-events: none;
 				// background: none !important;
 				@include mq-up(md) {
 					width: 780px;

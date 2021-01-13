@@ -3,7 +3,9 @@
 				<div class="item-content-wrapper">
 					<div class="item-content">
 						<div class="info-container">
+							<a href="<?php the_permalink(); ?>">
 							<div class="thumbnail" onMouseOver="this.style.clipPath='<?php echo random_clip_path("event"); ?>'" onMouseOut="this.style.clipPath='polygon(0% 0, 100% 0%, 100% 100%, 0 100%)'"><?php the_post_thumbnail("medium-crop"); ?></div>
+							</a>
 							<div class="date">
 								<span class="stdview"><?php echo oscillations_date_format($post); ?></span>
 								<span class="listview"><?php echo oscillations_date_format($post,"list"); ?></span>

@@ -120,6 +120,24 @@ body.single {
 					}
 				}
 			}
+			.related-events {
+				border-top: 2px solid;
+				padding-top: 2em;
+				float: left;
+				width: 100%;
+				.left-col {
+					float: left;
+					width: 50%;
+				}
+				.right-col {
+					float: right;
+					width: 50%;
+				}
+				a, a:visited {
+					color: inherit;
+					text-decoration: underline;
+				}
+			}
 		}
 		&.event, &.media {
 
