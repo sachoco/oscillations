@@ -134,10 +134,10 @@ Vibrant: Picking up a color dynamically from the image
 
 			vibrant.getPalette((err, palette) => {
 
-				var hex = palette["DarkMuted"].getHex();
-				var rgb = palette["DarkMuted"].getRgb();
-        // var hex = palette["Muted"].getHex();
-				// var rgb = palette["Muted"].getRgb();
+				// var hex = palette["DarkMuted"].getHex();
+				// var rgb = palette["DarkMuted"].getRgb();
+        var hex = palette["Muted"].getHex();
+				var rgb = palette["Muted"].getRgb();
 				rgb.push(0.7);
 				$(this).attr("data-color",hex);
 		    // $(this).css({
@@ -164,8 +164,8 @@ Vibrant: Picking up a color dynamically from the image
 		if(img){
 			var vibrant = new Vibrant(img);
 			vibrant.getPalette((err, palette) => {
-        var hex = palette["DarkMuted"].getHex();
-				// var hex = palette["Muted"].getHex();
+        // var hex = palette["DarkMuted"].getHex();
+				var hex = palette["Muted"].getHex();
 				var light_hex = palette["LightVibrant"].getHex();
         var $article_header_inner = $(this).find(".article-header-inner");
 				$article_header_inner.css({

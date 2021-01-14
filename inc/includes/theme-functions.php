@@ -56,27 +56,11 @@ function get_plural_name($post_type){
 
 function random_clip_path($post_type = 'artist'){
 	if($post_type=='event'){
-		// $choices = array(
-		// 	'8% 0, 100% 0%, 92% 100%, 0 100%',
-		// 	'0 0%, 92% 0%, 100% 100%, 8% 100%',
-		// );
-		// $choice = array_rand($choices,1);
-		// $output = 'polygon('.$choices[$choice].')';
 		$choice = rand(0, 10)."% ".rand(0, 10)."%, ".rand(90, 100)."% ".rand(0, 10)."%, ".rand(90, 100)."% ".rand(90, 100)."%, ".rand(0, 10)."% ".rand(90, 100)."%";
-		$output = 'polygon('.$choice.')';
 	}else{
-		$choices = array(
-			'0 0, 100% 8%, 100% 100%, 0 92%',
-			'0 8%, 100% 0%, 100% 92%, 0 100%',
-		);
-		// $choice = array_rand($choices,1);
-		// $output = 'polygon('.$choices[$choice].')';
-
 		$choice = rand(0, 10)."% ".rand(0, 10)."%, ".rand(90, 100)."% ".rand(0, 10)."%, ".rand(90, 100)."% ".rand(90, 100)."%, ".rand(0, 10)."% ".rand(90, 100)."%";
-		$output = 'polygon('.$choice.')';
-
 	}
-
+	$output = 'polygon('.$choice.')';
 
 	return $output;
 }
@@ -88,7 +72,7 @@ function format_related_item($post=null){
 		$thumbnail = get_the_post_thumbnail_url($post->ID,'thumbnail-crop');
 
 		$output = "<div>";
-		$output .= "<div class='related-thumbnail'><img src='".esc_url($thumbnail)."' alt='".$title."'></div>";
+		$output .= "<div class='related-thumbnail'><a href='".esc_url( $permalink )."'><img src='".esc_url($thumbnail)."' alt='".$title."'></a></div>";
 		$output .= "<div class='related-meta'>";
 		$output .= "<a href='".esc_url( $permalink )."'><button class='view-more'>More info</button></a>";
 		$output .= "<span class='title'>".$title."</span>";
