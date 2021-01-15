@@ -1,5 +1,5 @@
 
-			<div class="item event" >
+			<div class="item event" data-href="<?php the_permalink(); ?>">
 				<div class="item-content-wrapper">
 					<div class="item-content">
 						<div class="info-container">

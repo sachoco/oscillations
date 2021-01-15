@@ -429,16 +429,21 @@ body.nav-color-inverse {
 		padding: 100px;
 	}
 	a {
-		@extend h1;
-		color: white;
-	    text-decoration: none;
-	    font-weight: 500;
-	    font-size: 2em;
-	    text-transform: uppercase;
-	    line-height: 1;
-	    @include mq-up(md) {
-	    	font-size: 4em;
-	    }
+		.title {
+			@extend h1;
+			color: white;
+		    text-decoration: none;
+		    font-weight: 500;
+		    font-size: 2em;
+		    text-transform: uppercase;
+		    line-height: 1;
+		    @include mq-up(md) {
+		    	font-size: 4em;
+		    }
+		}
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	text-align: center;
 	.footer-nav-content {

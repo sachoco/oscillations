@@ -570,9 +570,16 @@ body.post-type-archive-event {
 					// width: auto;
 					margin-bottom: 0;
 					margin-right: 0;
-					border-top: 2px solid;
+					border-top: 1px solid;
 					width: 100%;
 					padding: 1em 0;
+					cursor: pointer;
+					a {
+						text-decoration: none;
+					}
+					&:last-child {
+						border-bottom: 1px solid;
+					}
 					&:hover {
 						background-color: #F4E4D8;
 					}
@@ -613,6 +620,7 @@ body.post-type-archive-event {
 								@include mq-up(md) {
 									flex-basis: 15%;
 									font-weight: 400;
+									white-space: normal;
 								}
 								.stdview {
 									display: none;
@@ -633,7 +641,6 @@ body.post-type-archive-event {
 									font-size: 1em;
 									font-weight: 500;
 								}
-
 							}
 
 							@include mq-down(md) {
@@ -825,6 +832,13 @@ body.blog {
 				border-top: 1px solid;
 				width: 100%;
 				padding: 1em 0;
+				cursor: pointer;
+				a {
+					text-decoration: none;
+				}
+				&:last-child {
+					border-bottom: 1px solid;
+				}
 				&:hover {
 					background-color: #F4E4D8;
 					.item-content-wrapper {
@@ -844,7 +858,10 @@ body.blog {
 					height: 100%;
 					margin: auto;
 					background: none;
-					clip-path: none;
+					clip-path: none !important;
+					transform: none;
+					top: auto;
+					left: auto;
 
 					.item-content {
 						position: relative;

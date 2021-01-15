@@ -76,11 +76,11 @@
 					$next_post = get_adjacent_post(false, '', false);
 					if( $next_post ) {
 						$meta_info = '<div class="meta">'.oscillations_date_format($next_post).'</div>';
-						next_post_link( '<div class="header">NEXT '.$post_type.'</div> %link '.$meta_info.'<div class="arrow"><span class="icon-arrow"></span></div>', '%title' );
+						next_post_link( '<div class="header">NEXT '.$post_type.'</div> %link', '<div class="title">%title</div>'.$meta_info.'<div class="arrow"><span class="icon-arrow"></span></div>' );
 					} else {
 						$first = new WP_Query('post_type='.get_post_type().'&posts_per_page=1&order=ASC'); $first->the_post();
 								$meta_info = '<div class="meta">'.oscillations_date_format($first).'</div>';
-					    	echo '<div class="header">NEXT '.$post_type.'</div><a href="' . get_permalink() . '">'.get_the_title().'</a>'.$meta_info.'<div class="arrow"><span class="icon-arrow"></span></div>';
+								echo '<div class="header">NEXT '.$post_type.'</div><a href="' . get_permalink() . '"><div class="title">'.get_the_title()."</div>".$meta_info.'<div class="arrow"><span class="icon-arrow"></span></div></a>';
 					    wp_reset_query();
 					};
 
@@ -90,11 +90,11 @@
 					if( $next_post ) {
 
 						$meta_info = '<div class="meta">'.oscillations_date_format($next_post).'</div>';
-						previous_post_link( '<div class="header">NEXT '.$post_type.'</div> %link '.$meta_info.'<div class="arrow"><span class="icon-arrow"></span></div>', '%title' );
+						previous_post_link( '<div class="header">NEXT '.$post_type.'</div> %link', '<div class="title">%title</div>'.$meta_info.'<div class="arrow"><span class="icon-arrow"></span></div>' );
 					} else {
 						$first = new WP_Query('post_type='.get_post_type().'&posts_per_page=1&order=DESC'); $first->the_post();
 								$meta_info = '<div class="meta">'.oscillations_date_format($first).'</div>';
-					    	echo '<div class="header">NEXT '.$post_type.'</div><a href="' . get_permalink() . '">'.get_the_title().'</a>'.$meta_info.'<div class="arrow"><span class="icon-arrow"></span></div>';
+					    	echo '<div class="header">NEXT '.$post_type.'</div><a href="' . get_permalink() . '"><div class="title">'.get_the_title()."</div>".$meta_info.'<div class="arrow"><span class="icon-arrow"></span></div></a>';
 					    wp_reset_query();
 					};
 				}

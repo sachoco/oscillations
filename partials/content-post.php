@@ -1,5 +1,5 @@
 <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
-<div class="item" onMouseOver="this.querySelector('.item-content-wrapper').style.clipPath='<?php echo random_clip_path("event"); ?>'" onMouseOut="this.querySelector('.item-content-wrapper').style.clipPath='polygon(0% 0, 100% 0%, 100% 100%, 0 100%)'">
+<div class="item" data-href="<?php the_permalink(); ?>" onMouseOver="this.querySelector('.item-content-wrapper').style.clipPath='<?php echo random_clip_path("event"); ?>'" onMouseOut="this.querySelector('.item-content-wrapper').style.clipPath='polygon(0% 0, 100% 0%, 100% 100%, 0 100%)'">
 	<a href="<?php the_permalink(); ?>">
 	<div class="item-inner" style="background-image: url('<?php echo esc_url($featured_img_url); ?>');">
 		<div class="item-content-wrapper">

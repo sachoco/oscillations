@@ -37,7 +37,7 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
   		$(this).parent().toggleClass("on");
   		$("section.content").toggleClass("list-view");
    		if($("body").hasClass("post-type-archive-artist")||$("body").hasClass("home")) {
- 			if($("section.content").hasClass("list-view")){
+ 			  if($("section.content").hasClass("list-view")){
   				$("body").css("background-color", "#FDF4EF");
           $("body").removeClass("nav-color-inverse");
 	  		}else{
@@ -51,15 +51,30 @@ import Vibrant from "node-vibrant/dist/vibrant.js";
 	  			$("body").addClass("nav-color-inverse");
 	  		}
      	}
-      	if($("body").hasClass("post-type-archive-event")){
+      if($("body").hasClass("post-type-archive-event")){
      		if($("section.content").hasClass("list-view")){
   				$(".info-container .meta").replaceWith(function() {
 	  				return $('.meta-item', this);
 	  			});
+          $('.item').on('click', function(){
+            var url = $(this).data('href');
+            location.href = url;
+          });
   			}else{
 	  			$(".info-container .place").each(function() {
 					$(this).add($(this).next('.meta-item')).wrapAll( "<div class='meta' />");
+          $('.item').off('click');
 				});
+	  		}
+     	}
+      if($("body").hasClass("blog")){
+     		if($("section.content").hasClass("list-view")){
+          $('.item').on('click', function(){
+            var url = $(this).data('href');
+            location.href = url;
+          });
+  			}else{
+          $('.item').off('click');
 	  		}
      	}
   	});
