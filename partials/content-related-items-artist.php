@@ -22,7 +22,7 @@
 	<?php endif; ?>
 
 	<?php $related_media_posts = get_posts(array(
-		'post_type' => 'media',
+		'post_type' => 'post',
 		'meta_query' => array(
 			array(
 				'key' => 'artist', // name of custom field

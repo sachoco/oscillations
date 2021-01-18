@@ -13,7 +13,7 @@
 
 
 	<?php $related_media_posts = get_posts(array(
-		'post_type' => 'media',
+		'post_type' => 'post',
 		'meta_query' => array(
 			array(
 				'key' => 'project', // name of custom field

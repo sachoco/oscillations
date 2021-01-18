@@ -473,6 +473,9 @@ body.single-project .footer-nav {
 	color: #F7C3FF;
 	a {
 		color: #F7C3FF;
+		.title {
+			color: #F7C3FF;
+		}
 	}
 	.footer-nav-content {
 		.arrow {
@@ -486,6 +489,9 @@ body.single-event .footer-nav, body.single-post .footer-nav {
 	color: #000;
 	a {
 		color: #000;
+		.title {
+			color: #000;
+		}
 	}
 	.footer-nav-content {
 		.arrow {
