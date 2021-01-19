@@ -8,7 +8,7 @@
 	@else
 
 	  	@section('before_content')
-		<div class="view-switcher">
+		<div class="view-switcher <?php if($_COOKIE["listview"]){ echo 'on';} ?>">
 			<button class="listview-toggle" >View as list</button>
 			<button class="close" ><span class="cross-icon"></span>Close list</button>
 		</div>
@@ -17,7 +17,7 @@
 
 		@if (get_post_type()!="event")
 
-			@while (have_posts()) 
+			@while (have_posts())
 			<?php the_post(); ?>
 				@include('partials.content-'.get_post_type())
 			@endwhile
@@ -28,4 +28,3 @@
 		@endif
 	@endif
 @endsection
-

@@ -28,7 +28,7 @@
 		@else
 
 		  @section('before_content')
-			<div class="view-switcher">
+			<div class="view-switcher <?php if($_COOKIE["listview"]){ echo 'on';} ?>">
 				<button class="listview-toggle" >View as list</button>
 				<button class="close" ><span class="cross-icon"></span>Close list</button>
 			</div>

@@ -2,14 +2,14 @@
 <html <?php language_attributes(); ?>>
   @include('partials.head')
   <body <?php body_class() ?>>
-  	
+
   	@include('partials.header')
 
   	@yield('before_main')
 
   	<section class="main">
 		@yield('before_content')
-			<section class="content">
+			<section class="content <?php if($_COOKIE["listview"]){ echo 'list-view';} ?>">
 			@yield('content')
 			</section>
 			<section class="related-items">
@@ -25,5 +25,3 @@
     <?php wp_footer() ?>
   </body>
 </html>
-
-
