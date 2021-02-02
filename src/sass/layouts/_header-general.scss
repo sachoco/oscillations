@@ -27,13 +27,22 @@ header.header {
 		font-size: 50px;
 		// margin: 0;
 		// padding: 0;
-		@include mq-up(md) {
-			display: none;
-		}
 		a {
 			color: #fff;
 			// padding: 0;
 		}
+		@include mq-up(md) {
+			// display: none;
+			position: fixed;
+	    bottom: 50px;
+	    left: 50px;
+			right: auto;
+			a {
+
+				color: $color__text-main;
+			}
+		}
+
 	}
 
 }

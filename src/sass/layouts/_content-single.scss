@@ -4,10 +4,10 @@ body.single {
 	}
 	&.single-artist, &.single-project {
 		background-color: #FFE3CC;
-		color: #BA7D4C;
+		color: var(--single-article-text-color);//#BA7D4C;
 		.related-items {
 			background-color: #FFE3CC;
-			color: #BA7D4C;
+			color: var(--single-article-text-color);//#BA7D4C;
 		}
 		@include mq-up(md) {
 			.related-items {
@@ -24,7 +24,7 @@ body.single {
 		}
 		.related-items {
 			background-color: #FFE3CC;
-			color: #BA7D4C;
+			color: var(--single-article-text-color);//#BA7D4C;
 		}
 	}
 	article {

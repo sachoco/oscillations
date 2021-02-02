@@ -339,7 +339,7 @@ body.home {
 		}
 		z-index: 9;
 		.listview-toggle{
-			color: $color__text-main-inversed;
+			// color: $color__text-main-inversed;
 		}
 
 		// @include mq-up(md) {
@@ -527,6 +527,16 @@ body.nav-color-inverse {
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a {
 			border-color: var(--nav-text-color);
+		}
+	}
+	.social-media {
+		a {
+			color: var(--nav-text-color);
+		}
+	}
+	.view-switcher {
+		.listview-toggle{
+			color: var(--nav-text-color);
 		}
 	}
 }

@@ -17,6 +17,7 @@
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+    outline:none;
 	}
  }
   @mixin arrow_link() {
@@ -140,11 +141,11 @@ body.post-type-archive-event, body.blog {
 		&.view, &.view-more {
 			background: none;
 			border: 2px solid;
-      color: #BA7D4C;
+      color: var(--single-article-text-color);//#BA7D4C;
 			&:hover {
-				color: #fff;
-        background-color: #BA7D4C;
-        border-color: #BA7D4C;
+				color: var(--hover-button-text-color);//#fff;
+        background-color: var(--single-article-text-color);//#BA7D4C;
+        border-color: var(--single-article-text-color);//#BA7D4C;
 			}
 		}
 	}

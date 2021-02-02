@@ -596,10 +596,11 @@ body.post-type-archive-event {
 						.info-container {
 							display: flex;
 
-							justify-content: space-between;
+
 							align-items: center;
 							@include mq-up(md) {
 								flex-wrap: nowrap;
+								justify-content: space-between;
 								>div {
 									width: auto;
 									margin-right: 0;

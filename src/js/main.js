@@ -223,6 +223,9 @@ Vibrant: Picking up a color dynamically from the image
 			vibrant.getPalette((err, palette) => {
 				var hex = palette["DarkMuted"].getHex();
 				var light_hex = palette["LightVibrant"].getHex();
+        document.documentElement.style.setProperty('--single-article-text-color', light_hex);
+        document.documentElement.style.setProperty('--hover-button-text-color', "#000");
+
 				$(this).css({
 			      "background-color": hex,
 			      "color": light_hex
@@ -237,6 +240,7 @@ Vibrant: Picking up a color dynamically from the image
         $(".related-items .back-navigation").css({
 		      "border-color": light_hex
 		    });
+
 			});
 		}
 	});

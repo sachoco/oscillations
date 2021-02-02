@@ -18,7 +18,7 @@
     </ul>
   </nav>
 	<div class="social-media">
-		<a href="#link-to-instagram"><span class="icon-instagram-home"></span></a>
+    <a href="https://www.instagram.com/oscillations_eu/" target="_blank"><span class="icon-instagram-home"></span></a>
 	</div>
   <button class="menu-toggle close">Close</button>
 </header>

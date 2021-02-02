@@ -15,9 +15,9 @@
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-text.svg">
 			</div>
 		</div>
-		<div class="social-media">
+		<!-- <div class="social-media">
 			<a href="https://www.instagram.com/oscillations_eu/" target="_blank"><span class="icon-instagram-home"></span></a>
-		</div>
+		</div> -->
 	</section>
 	@endsection
 	@section('content')
